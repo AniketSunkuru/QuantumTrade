@@ -1,7 +1,0 @@
-{
-  "buildCommand": "npm run build --prefix frontend",
-  "outputDirectory": "frontend/build",
-  "env": {
-    "YARN_PRODUCTION": "false"
-  }
-}
