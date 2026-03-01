@@ -12,7 +12,8 @@ const Holdings = () => {
 
   useEffect(()=>{
     const token = localStorage.getItem("token");
-    axios.get("http://localhost:3002/allHoldings", {
+    const backendUrl = process.env.REACT_APP_BACKEND_URL || "http://localhost:3002";
+    axios.get(`${backendUrl}/allHoldings`, {
       headers: {
         token: "Bearer " + token
       }

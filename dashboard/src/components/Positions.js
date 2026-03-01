@@ -12,7 +12,8 @@ const Positions = () => {
   // useEffect will execute for the single time only as "[]" is passed
   useEffect(()=>{
     const token = localStorage.getItem("token");
-    axios.get("http://localhost:3002/allPositions", {
+    const backendUrl = process.env.REACT_APP_BACKEND_URL || "http://localhost:3002";
+    axios.get(`${backendUrl}/allPositions`, {
       headers: {
         token: "Bearer " + token
       }

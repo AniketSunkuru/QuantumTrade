@@ -13,7 +13,8 @@ const SellActionWindow = ({ uid }) => {
 
   const handleSellClick = ()=>{
     const token = localStorage.getItem("token");
-    axios.post("http://localhost:3002/newOrder", {
+    const backendUrl = process.env.REACT_APP_BACKEND_URL || "http://localhost:3002";
+    axios.post(`${backendUrl}/newOrder`, {
       name:uid,
       qty:stockQuantity,
       price:stockPrice,

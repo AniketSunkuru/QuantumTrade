@@ -9,7 +9,8 @@ const Orders = () => {
 
   useEffect(()=>{
     const token = localStorage.getItem("token");
-    axios.get("http://localhost:3002/allOrders", {
+    const backendUrl = process.env.REACT_APP_BACKEND_URL || "http://localhost:3002";
+    axios.get(`${backendUrl}/allOrders`, {
       headers: {
         token: "Bearer " + token
       }
@@ -21,7 +22,8 @@ const Orders = () => {
   const deleteOrder =async(id)=>{
     try{
       const token = localStorage.getItem("token");
-      await axios.delete(`http://localhost:3002/deleteOrder/${id}`, {
+      const backendUrl = process.env.REACT_APP_BACKEND_URL || "http://localhost:3002";
+      await axios.delete(`${backendUrl}/deleteOrder/${id}`, {
         headers: {
           token: "Bearer " + token
         }
