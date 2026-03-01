@@ -11,10 +11,15 @@ const Positions = () => {
 
   // useEffect will execute for the single time only as "[]" is passed
   useEffect(()=>{
-    axios.get("http://localhost:3002/allPositions").then((res)=>{
+    const token = localStorage.getItem("token");
+    axios.get("http://localhost:3002/allPositions", {
+      headers: {
+        token: "Bearer " + token
+      }
+    }).then((res)=>{
       setAllPositions(res.data);
     });
-  },[]);
+  },[])
 
   return (
     <>

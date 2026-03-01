@@ -11,11 +11,16 @@ const Holdings = () => {
   const [allHoldings,setAllHoldings] = useState([]);
 
   useEffect(()=>{
-    axios.get("http://localhost:3002/allHoldings").then((res)=>{
+    const token = localStorage.getItem("token");
+    axios.get("http://localhost:3002/allHoldings", {
+      headers: {
+        token: "Bearer " + token
+      }
+    }).then((res)=>{
       console.log(res.data);
       setAllHoldings(res.data);
     });
-  },[]);
+  },[])
 
  const labels = allHoldings.map((subArray)=>subArray["name"]);
  const data={

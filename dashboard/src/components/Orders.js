@@ -8,14 +8,24 @@ const Orders = () => {
   const[allOrders,setAllOrders] = useState([]);
 
   useEffect(()=>{
-    axios.get("http://localhost:3002/allOrders").then((res)=>{
+    const token = localStorage.getItem("token");
+    axios.get("http://localhost:3002/allOrders", {
+      headers: {
+        token: "Bearer " + token
+      }
+    }).then((res)=>{
       setAllOrders(res.data);
     });
-  },[]);
+  },[])
 
   const deleteOrder =async(id)=>{
     try{
-      await axios.delete(`http://localhost:3002/deleteOrder/${id}`);
+      const token = localStorage.getItem("token");
+      await axios.delete(`http://localhost:3002/deleteOrder/${id}`, {
+        headers: {
+          token: "Bearer " + token
+        }
+      });
       setAllOrders(allOrders.filter(order => order.id !== id));
     }catch(error){
       console.log("Error deleting order",error);
