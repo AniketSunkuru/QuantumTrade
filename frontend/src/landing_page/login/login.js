@@ -51,6 +51,7 @@ export default function Login() {
           <label>Email</label>
           <input
             name="email"
+            value={credentials.email}
             placeholder="Enter email"
             onChange={handleChange}
           />
@@ -61,6 +62,7 @@ export default function Login() {
           <input
             name="password"
             type="password"
+            value={credentials.password}
             placeholder="Enter password"
             onChange={handleChange}
           />
