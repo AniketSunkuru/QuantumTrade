@@ -1,8 +1,9 @@
 import React ,{useState} from "react";
 
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 const Menu = () => {
+  const navigate = useNavigate();
   const[selectedMenu,setSelectedMenu] = useState(0);
   const[isProfileDropdownOpen,setIsProfileDropdownOpen] = useState(false);
 
@@ -12,6 +13,12 @@ const Menu = () => {
 
   const handleProfileClick = ()=>{
     setIsProfileDropdownOpen(!isProfileDropdownOpen);
+  }
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    const frontendUrl = process.env.REACT_APP_FRONTEND_URL || "http://localhost:3000";
+    window.location.href = `${frontendUrl}/login`;
   }
   //the style for these classes is defined in CSS file 
   const menuClass = "menu";//Applied to unselected/inactive menu items (normal styling)
@@ -57,6 +64,13 @@ const Menu = () => {
         <div className="profile" onClick={handleProfileClick}>
           <div className="avatar">ZU</div>
           <p className="username">USERID</p>
+          {isProfileDropdownOpen && (
+            <div className="profile-dropdown">
+              <button onClick={handleLogout} className="logout-btn">
+                Logout
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </div>
