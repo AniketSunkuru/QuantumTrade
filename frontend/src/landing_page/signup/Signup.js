@@ -1,8 +1,9 @@
 import { useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 export default function Signup() {
+  const navigate = useNavigate();
   const [form, setForm] = useState({
     username: "",
     email: "",
@@ -25,18 +26,8 @@ export default function Signup() {
       form
     );
 
-    alert("Registered Successfully");
-
-    // ✅ Clear form fields
-    setForm({
-      username: "",
-      email: "",
-      password: ""
-    });
-
-    // ✅ Redirect to dashboard (pass token)
-    window.location.href =
-      "http://localhost:3001?token=" + res.data.accessToken;
+    localStorage.setItem("token", res.data.accessToken);
+    navigate("/dashboard");
 
   } catch (err) {
     if (err.response && err.response.data.message) {

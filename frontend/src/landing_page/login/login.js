@@ -28,8 +28,7 @@ export default function Login() {
     );
 
     localStorage.setItem("token", res.data.accessToken);
-
-   window.location.href ="http://localhost:3001?token=" + res.data.accessToken;
+    navigate("/dashboard");
 
   } catch (err) {
     const message = err.response?.data?.message;
