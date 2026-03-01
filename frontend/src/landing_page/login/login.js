@@ -23,7 +23,7 @@ export default function Login() {
   console.log("Login clicked");
   try {
     const res = await axios.post(
-      "http://localhost:3002/api/auth/login",
+      "https://quantumtrade-1abt.onrender.com/api/auth/login",
       credentials
     );
 

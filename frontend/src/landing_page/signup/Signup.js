@@ -21,7 +21,7 @@ export default function Signup() {
 
   try {
     const res = await axios.post(
-      "http://localhost:3002/api/auth/register",
+      "https://quantumtrade-1abt.onrender.com/api/auth/register",
       form
     );
 
