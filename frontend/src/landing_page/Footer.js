@@ -8,7 +8,7 @@ function Footer() {
           <div className="col">
             <img src="media/images/logo.svg" style={{ width: "70%" }}></img>
             <p style={{ fontSize: "15px" }}>
-              &copy; 2010 - 2025, Zerodha Broking Ltd.All rights reserved.
+              &copy; 2010 - 2025, QuantumTrade Broking Ltd.All rights reserved.
             </p>
             <div></div>
           </div>
@@ -121,12 +121,12 @@ function Footer() {
             <br></br>
             <br></br>
             <a href="" style={{ textDecoration: "none", color: "black" }}>
-              Zerodha Cares (CSR)
+              QuantumTrade Cares (CSR)
             </a>
             <br></br>
             <br></br>
             <a href="" style={{ textDecoration: "none", color: "black" }}>
-              Zerodha.tech
+              QuantumTrade.tech
             </a>
             <br></br>
             <br></br>
@@ -178,10 +178,10 @@ function Footer() {
         </div>
         <div className="mt-5 text-muted " style={{ fontSize: "11px" }}>
           <p>
-            Zerodha Broking Ltd.: Member of NSE, BSE​ &​ MCX – SEBI Registration
-            no.: INZ000031633 CDSL/NSDL: Depository services through Zerodha
+            QuantumTrade Broking Ltd.: Member of NSE, BSE​ &​ MCX – SEBI Registration
+            no.: INZ000031633 CDSL/NSDL: Depository services through QuantumTrade
             Broking Ltd. – SEBI Registration no.: IN-DP-431-2019 Registered
-            Address: Zerodha Broking Ltd., #153/154, 4th Cross, Dollars Colony,
+            Address: QuantumTrade Broking Ltd., #153/154, 4th Cross, Dollars Colony,
             Opp. Clarence Public School, J.P Nagar 4th Phase, Bengaluru -
             560078, Karnataka, India. For any complaints pertaining to
             securities broking please write to complaints@zerodha.com, for DP

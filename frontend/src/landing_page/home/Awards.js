@@ -9,7 +9,7 @@ function Awards() {
                 </div>
                 <div className="col-6 p-5 mb-5">
                     <h1>Largest Stock Broker in India</h1>
-                    <p className="mb-5">2+ million Zerodha clients contribute to over 15% of all volumes in india daily by trading and investing in:</p>
+                    <p className="mb-5">2+ million QuantumTrade clients contribute to over 15% of all volumes in india daily by trading and investing in:</p>
                     <div className="row">
                         <div className = "col-6">
                             <ul>

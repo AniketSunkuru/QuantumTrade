@@ -8,14 +8,14 @@ function Stats() {
                     <h3>Trust with confidence</h3>
                     <div className="mt-5">
                         <h4>Customer-first always</h4>
-                        <p className='text-muted'>That's why 1.6+ crore customers trust Zerodha with ~ ₹6 lakh crores of equity investments, making us India’s largest broker; contributing to 15% of daily retail exchange volumes in India.</p>
+                        <p className='text-muted'>That's why 1.6+ crore customers trust QuantumTrade with ~ ₹6 lakh crores of equity investments, making us India's largest broker; contributing to 15% of daily retail exchange volumes in India.</p>
                     </div>
                     <div className="mt-5">
                         <h4>No spam or gimmicks</h4>
                         <p>No gimmicks, spam, "gamification", or annoying push notifications. High quality apps that you use at your pace, the way you like. Our philosophies.</p>
                     </div>
                     <div className="mt-5">
-                        <h4>The Zerodha universe</h4>
+                        <h4>The QuantumTrade universe</h4>
                         <p>Not just an app, but a whole ecosystem. Our investments in 30+ fintech startups offer you tailored services specific to your needs.</p>
                     </div>
                     <div className="mt-5">

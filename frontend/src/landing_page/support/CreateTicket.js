@@ -12,14 +12,14 @@ export default function CreateTicket() {
           <a href="" style={{ textDecoration: "none", lineHeight: "2.3" }}>Offline Account Opening</a><br />
           <a href="" style={{ textDecoration: "none", lineHeight: "2.3" }}>Company, Partnership and HUF Account Opening</a><br />
           <a href="" style={{ textDecoration: "none", lineHeight: "2.3" }}>NRI Account Opening</a><br />
-          <a href="" style={{ textDecoration: "none", lineHeight: "2.3" }}>Charges at Zerodha</a><br />
-          <a href="" style={{ textDecoration: "none", lineHeight: "2.3" }}>Zerodha IDFC FIRST Bank 3-in-1 Account</a><br />
+          <a href="" style={{ textDecoration: "none", lineHeight: "2.3" }}>Charges at QuantumTrade</a><br />
+          <a href="" style={{ textDecoration: "none", lineHeight: "2.3" }}>QuantumTrade IDFC FIRST Bank 3-in-1 Account</a><br />
           <a href="" style={{ textDecoration: "none", lineHeight: "2.3" }}>Getting Started</a>
         </div>
 
         <div className="col-4 p-5">
           <h4 className="">
-            <i className="fa-solid fa-user"></i> Your Zerodha Account
+            <i className="fa-solid fa-user"></i> Your QuantumTrade Account
           </h4>
           <a href="" style={{ textDecoration: "none", lineHeight: "2.3" }}>Login Credentials</a><br />
           <a href="" style={{ textDecoration: "none", lineHeight: "2.3" }}>Account Modification and Segment Addition</a><br />
@@ -30,7 +30,7 @@ export default function CreateTicket() {
 
         <div className="col-4 p-5 ">
           <h4 className="">
-            <i className="fa-solid fa-chart-column"></i> Your Zerodha Account
+            <i className="fa-solid fa-chart-column"></i> Your QuantumTrade Account
           </h4>
           <a href="" style={{ textDecoration: "none", lineHeight: "2.3" }}>Margin/leverage, Product and Order types</a><br />
           <a href="" style={{ textDecoration: "none", lineHeight: "2.3" }}>Kite Web and Mobile</a><br />

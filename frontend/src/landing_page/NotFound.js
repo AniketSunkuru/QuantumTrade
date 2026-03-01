@@ -9,7 +9,7 @@ export default function NotFound() {
                 <p>
                     Visit {" "}
                     <Link to="/">
-                         Zerodha’s home page
+                         QuantumTrade's home page
                     </Link>
                 </p>
             </div>

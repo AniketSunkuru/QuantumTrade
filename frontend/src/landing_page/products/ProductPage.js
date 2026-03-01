@@ -20,7 +20,7 @@ export default function ProductPage() {
       <RightSection
         imageURL="media/images/console.png"
         productName="Console"
-        productDescription="The central dashboard for your Zerodha account. Gain insights into your trades and investments with in-depth reports and visualisations."
+        productDescription="The central dashboard for your QuantumTrade account. Gain insights into your trades and investments with in-depth reports and visualisations."
         tryDemo=""
         tryDemoText="Learn more"
       />
@@ -51,7 +51,7 @@ export default function ProductPage() {
         googlePlay=""
         appStore=""
       />
-      <p className="text-center" style={{fontSize:"20px"}}>Want to know more about our technology stack? Check out the Zerodha.tech blog.</p>
+      <p className="text-center" style={{fontSize:"20px"}}>Want to know more about our technology stack? Check out the QuantumTrade.tech blog.</p>
       <Universe />
     </>
   );

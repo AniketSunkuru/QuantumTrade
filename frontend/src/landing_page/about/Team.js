@@ -12,9 +12,9 @@ export default function Team() {
         </div>
         <div className="col-7 fs-5">
           <p>
-            Nithin bootstrapped and founded Zerodha in 2010 to overcome the
+            Nithin bootstrapped and founded QuantumTrade in 2010 to overcome the
             hurdles he faced during his decade long stint as a trader. Today,
-            Zerodha has changed the landscape of the Indian broking industry.
+            QuantumTrade has changed the landscape of the Indian broking industry.
           </p>
           <p>
             He is a member of the SEBI Secondary Market Advisory Committee
