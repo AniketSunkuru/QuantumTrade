@@ -1,21 +1,17 @@
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 
 export default function Dashboard() {
-  const navigate = useNavigate();
   const token = localStorage.getItem("token");
 
   useEffect(() => {
-    if (!token) {
-      navigate("/login");
+    if (token) {
+      // Redirect to dashboard app on localhost:3001 with token
+      window.location.href = `http://localhost:3001?token=${token}`;
+    } else {
+      // Redirect to login if no token
+      window.location.href = "/login";
     }
-  }, [token, navigate]);
+  }, [token]);
 
-  return (
-    <div style={{ padding: "20px", textAlign: "center" }}>
-      <h1>Dashboard</h1>
-      <p>Welcome to your dashboard!</p>
-      <p>Token stored: {token ? "✓" : "✗"}</p>
-    </div>
-  );
+  return null;
 }
