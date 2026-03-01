@@ -9,6 +9,7 @@ const {HoldingsModel} = require("./model/HoldingsModel");
 const {PositionsModel} = require("./model/PositionsModel");
 const {OrdersModel} = require("./model/OrdersModel");
 const authRoute = require("./auth");
+const verify = require("./verifyToken");
 
 const PORT = process.env.PORT || 3002;
 const uri = process.env.MONGO_URL;
@@ -185,23 +186,23 @@ app.use("/api/auth", authRoute);
 //     res.send("Positions Added")
 // })
 
-app.get("/allHoldings",async(req,res)=>{
+app.get("/allHoldings", verify, async(req,res)=>{
     // find({}) if we donot pass any value inside "find" it finds all
     let allHoldings = await HoldingsModel.find({});
     res.json(allHoldings)
 })
 
-app.get("/allPositions",async(req,res)=>{
+app.get("/allPositions", verify, async(req,res)=>{
     let allPositions = await PositionsModel.find({});
     res.json(allPositions)
 })
 
-app.get("/allOrders",async(req,res)=>{
+app.get("/allOrders", verify, async(req,res)=>{
     let allOrders = await OrdersModel.find({});
     res.json(allOrders)
 })
 
-app.post('/newOrder',async(req,res)=>{
+app.post('/newOrder', verify, async(req,res)=>{
     let newOrder = new OrdersModel({
         name:req.body.name,
         qty:req.body.qty,
@@ -212,7 +213,7 @@ app.post('/newOrder',async(req,res)=>{
     res.send("order Saved");
 })
 
-app.delete("/deleteOrder/:id",async(req,res)=>{
+app.delete("/deleteOrder/:id", verify, async(req,res)=>{
     try{
         await OrdersModel.findByIdAndDelete(req.params.id);
         res.send("order Deleted Successfully");
